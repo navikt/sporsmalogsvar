@@ -18,7 +18,7 @@ fun Application.apiModule(
     installContentNegotiation()
     installStatusPages()
 
-    val sessionService = SessionService()
+    val sessionService = SessionService(database = database)
 
     routing {
         registerPodApi(

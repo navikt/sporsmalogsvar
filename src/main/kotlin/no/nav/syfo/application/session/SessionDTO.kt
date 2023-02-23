@@ -2,7 +2,7 @@ package no.nav.syfo.application.session
 
 import java.util.UUID
 
-data class SessionDTO (
+data class SessionDTO(
     val code: String,
 )
 
