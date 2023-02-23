@@ -5,6 +5,7 @@ import io.ktor.server.routing.*
 import no.nav.syfo.application.ApplicationState
 import no.nav.syfo.application.database.DatabaseInterface
 import no.nav.syfo.application.metric.registerMetricApi
+import no.nav.syfo.application.sporsmal.registerSporsmalApi
 
 fun Application.apiModule(
     applicationState: ApplicationState,
@@ -21,5 +22,6 @@ fun Application.apiModule(
             database = database
         )
         registerMetricApi()
+        registerSporsmalApi()
     }
 }
