@@ -5,6 +5,8 @@ import io.ktor.server.routing.*
 import no.nav.syfo.application.ApplicationState
 import no.nav.syfo.application.database.DatabaseInterface
 import no.nav.syfo.application.metric.registerMetricApi
+import no.nav.syfo.application.session.SessionService
+import no.nav.syfo.application.session.registerSessionApi
 import no.nav.syfo.application.sporsmal.registerSporsmalApi
 
 fun Application.apiModule(
@@ -16,6 +18,8 @@ fun Application.apiModule(
     installContentNegotiation()
     installStatusPages()
 
+    val sessionService = SessionService()
+
     routing {
         registerPodApi(
             applicationState = applicationState,
@@ -23,5 +27,6 @@ fun Application.apiModule(
         )
         registerMetricApi()
         registerSporsmalApi()
+        registerSessionApi(sessionService = sessionService)
     }
 }
