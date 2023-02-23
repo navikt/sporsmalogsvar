@@ -3,7 +3,7 @@ package no.nav.syfo.application
 import io.ktor.server.application.*
 import no.nav.syfo.application.database.DatabaseEnvironment
 
-const val NAIS_DATABASE_ENV_PREFIX = "NAIS_DATABASE_sporsmalogsvar_sporsmalogsvar_DB"
+const val NAIS_DATABASE_ENV_PREFIX = "NAIS_DATABASE_SPORSMALOGSVAR_SPORSMALOGSVAR_DB"
 
 data class Environment(
     val database: DatabaseEnvironment = DatabaseEnvironment(
