@@ -40,6 +40,12 @@ spec:
       memory: 384Mi
   ingresses:
     - "https://sporsmalogsvar.dev.intern.nav.no"
+  accessPolicy:
+    inbound:
+      rules:
+        - application: sporretime
+          namespace: teamsykefravr
+          cluster: dev-gcp
   gcp:
     sqlInstances:
       - type: POSTGRES_14
